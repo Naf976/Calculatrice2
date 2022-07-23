@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    width: 500px;
+    height: 700px;
+    background-color: antiquewhite;
+}
+.ecran{
+    height: 150px;
+    background-color: #e0eae0;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calcul, .resultat{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 48%;
+}
+
+section.touches{
+    display: flex;
+    justify-content: space-around;
+}
+div{
+    display: grid;
+    width: 250px;
+    height: 300px;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "e7 e8 e9"
+    "e4 e5 e6"
+    "e1 e2 e3"
+    "e0 e0 eP";
+}
+aside{
+    display: grid;
+    width: 150px;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "eDel eC"
+    "eSlash eMulti"
+    "eMoins ePlus"
+    "eEgale ePlus";
+}
+.element0{grid-area: e0;}
+.element1{grid-area: e1;}
+.element2{grid-area: e2;}
+.element3{grid-area: e3;}
+.element4{grid-area: e4;}
+.element5{grid-area: e5;}
+.element6{grid-area: e6;}
+.element7{grid-area: e7;}
+.element8{grid-area: e8;}
+.element9{grid-area: e9;}
+.elementP{grid-area: eP;}
+.elementDel{grid-area: eDel;}
+.elementC{grid-area: eC;}
+.elementSlash{grid-area: eSlash;}
+.elementMulti{grid-area: eMulti;}
+.elementMoins{grid-area: eMoins;}
+.elementPlus{grid-area: ePlus;}
+.elementEgale{grid-area: eEgale;}
