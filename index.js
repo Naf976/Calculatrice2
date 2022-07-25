@@ -7,7 +7,18 @@ const resultat = document.querySelector("#resultat");
 let array1 = [];
 let array2 = [];
 
-//  Losqu'on click sur le boutton DEL
+
+//Losqu'on click sur le bouton clear
+document.querySelector(".init").addEventListener("click", function clear() {
+    array1 = [];
+    array2 = [];
+    saisie.value = "";
+    stock.value = "";
+    resultat.value = "";
+});
+
+
+//  Losqu'on click sur le bouton DEL
 document.querySelector(".sup").addEventListener("click", () => {
     array1.pop();
     saisie.value = array1.join("");
@@ -32,10 +43,22 @@ for (let a of operateur) {
 
     });
 }
+
+// Lorsqu'on click sur le bouton =
 document.querySelector(".egale").addEventListener("click", function calculer() {
     console.log(array1.join(""));
     array2.push(saisie.value);
     array1 = [];
     stock.value = array2.join("");
     resultat.value = eval(array2.join(""));
-})
+});
+
+// Losqu'on click sur le bouton point
+document.querySelector(".virgule").addEventListener("click", function virgule(){
+    array1.push(".");
+    if(saisie.value.includes(".") && array1.includes(".")){
+        array1.pop();
+        return
+    };
+    saisie.value += ".";
+});
