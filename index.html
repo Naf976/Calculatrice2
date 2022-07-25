@@ -10,32 +10,36 @@
 <body>
     <main>
         <section class="ecran">
-            <input class="calcul" type="text">
-            <input class="resultat" type="text">
+            <div id="calcul">
+                <input id="stock" type="text">
+                <input id="saisie" type="text">
+            </div>
+            
+            <input id="resultat" type="text">
         </section>
         <section class="touches">
-            <div>
-                <input class="element7" type="button" value="7">
-                <input class="element8" type="button" value="8">
-                <input class="element9" type="button" value="9">
-                <input class="element4" type="button" value="4">
-                <input class="element5" type="button" value="5">
-                <input class="element6" type="button" value="6">
-                <input class="element1" type="button" value="1">
-                <input class="element2" type="button" value="2">
-                <input class="element3" type="button" value="3">
-                <input class="element0" type="button" value="0">
-                <input class="elementP" type="button" value=".">
+            <div id="valeurs">
+                <input class="element7 nombre" type="button" value="7">
+                <input class="element8 nombre" type="button" value="8">
+                <input class="element9 nombre" type="button" value="9">
+                <input class="element4 nombre" type="button" value="4">
+                <input class="element5 nombre" type="button" value="5">
+                <input class="element6 nombre" type="button" value="6">
+                <input class="element1 nombre" type="button" value="1">
+                <input class="element2 nombre" type="button" value="2">
+                <input class="element3 nombre" type="button" value="3">
+                <input class="element0 nombre" type="button" value="0">
+                <input class="elementP virgule" type="button" value=".">
             </div>
     
             <aside>
-                <input class="elementDel" type="button" value="DEL">
-                <input class="elementC" type="button" value="C">
-                <input class="elementSlash" type="button" value="/">
-                <input class="elementMulti" type="button" value="*">
-                <input class="elementMoins" type="button" value="-">
-                <input class="elementPlus" type="button" value="+">
-                <input class="elementEgale" type="button" value="=">
+                <input class="elementDel element sup" type="button" value="DEL">
+                <input class="elementC element init" type="button" value="C">
+                <input class="elementSlash element operateur" type="button" value="/">
+                <input class="elementMulti element operateur" type="button" value="*">
+                <input class="elementMoins element operateur" type="button" value="-">
+                <input class="elementPlus element operateur" type="button" value="+">
+                <input class="elementEgale element egale" type="button" value="=">
             </aside>
         </section>
     </main>

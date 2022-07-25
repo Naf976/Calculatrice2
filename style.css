@@ -15,17 +15,22 @@ main{
     justify-content: center;
     align-items: center;
 }
-.calcul, .resultat{
+#calcul, #resultat{
     height: 100px;
     background-color: rgba(0, 0, 0, 0);
     width: 48%;
+}
+#stock, #saisie{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 section.touches{
     display: flex;
     justify-content: space-around;
 }
-div{
+#valeurs{
     display: grid;
     width: 250px;
     height: 300px;
@@ -64,3 +69,4 @@ aside{
 .elementMoins{grid-area: eMoins;}
 .elementPlus{grid-area: ePlus;}
 .elementEgale{grid-area: eEgale;}
+
