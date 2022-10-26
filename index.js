@@ -37,22 +37,29 @@ for (let i of element) {
 // Lorsqu'on appuis sur un opérateur
 for (let a of operateur) {
     a.addEventListener("click", () => {
-        if (resultat.value) {
-            array2 = [];
-            array1 = [resultat.value];
-            array1.push(a.value);
-            array2.push(array1.join(""));
-            array1 = [];
-            saisie.value = "";
-            stock.value = array2.join("");
-        } else {
-            array1.push(a.value);
-            array2.push(array1.join(""));
-            array1 = [];
-            saisie.value = "";
-            stock.value = array2.join("");
+        if(!saisie.value && a.value == "/" || a.value == "*"){
+            a.classList.add("wrong");
+            setTimeout(()=>{a.classList.remove("wrong")} , 1000);
+            
+            ;
+        } else{
+            if (resultat.value) {
+                array2 = [];
+                array1 = [resultat.value];
+                array1.push(a.value);
+                array2.push(array1.join(""));
+                array1 = [];
+                saisie.value = "";
+                stock.value = array2.join("");
+            } else {
+                array1.push(a.value);
+                array2.push(array1.join(""));
+                array1 = [];
+                saisie.value = "";
+                stock.value = array2.join("");
+            }
+    
         }
-
 
     }
 

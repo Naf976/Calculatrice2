@@ -30,6 +30,15 @@ section.touches{
     display: flex;
     justify-content: space-around;
 }
+.touches input{
+    background-color: rgb(219, 255, 243);
+}
+.touches input:hover{
+    background-color: aqua;
+}
+.touches input:active{
+    background-color: aquamarine;
+}
 #valeurs{
     display: grid;
     width: 250px;
@@ -69,4 +78,12 @@ aside{
 .elementMoins{grid-area: eMoins;}
 .elementPlus{grid-area: ePlus;}
 .elementEgale{grid-area: eEgale;}
+
+.touches .wrong{
+    animation: wrong 0.5s reverse;
+}
+
+@keyframes wrong {
+    100% {background-color: red;}
+}
 
