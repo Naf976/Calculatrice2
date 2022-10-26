@@ -42,23 +42,17 @@ for (let a of operateur) {
         array1 = [];
         saisie.value = "";
         stock.value = array2.join("");
-        if(array2[array2.length - 1] === a.value){
-            array2.pop();
-            return
-        };
-        console.log(array2);
 
     });
 }
 
 // Lorsqu'on click sur le bouton =
 document.querySelector(".egale").addEventListener("click", function calculer() {
+    console.log(array1.join(""));
     array2.push(saisie.value);
     array1 = [];
     stock.value = array2.join("");
     resultat.value = eval(array2.join(""));
-    saisie.value = "";
-    console.log(array2);
 });
 
 // Losqu'on click sur le bouton point
