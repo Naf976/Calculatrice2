@@ -4,15 +4,15 @@ let operateur = document.querySelectorAll(".operateur");
 let stock = document.querySelector("#stock");
 const resultat = document.querySelector("#resultat");
 
+// array1 est l'array stocké au moment où on tape les valeurs'
 let array1 = [];
+// array2 est l'élément stocké sous forme d'array lorsqu'on appui sur un oppérateur.
 let array2 = [];
 
 
 //Losqu'on click sur le bouton clear
 document.querySelector(".init").addEventListener("click", function clear() {
-    // array1 est le nombre indiqué dans la partie saisie
     array1 = [];
-    // array2 est l'élément de calcul stocké sous forme d'array lorsqu'on appui sur un oppérateur.
     array2 = [];
     saisie.value = "";
     stock.value = "";
@@ -37,18 +37,30 @@ for (let i of element) {
 // Lorsqu'on appuis sur un opérateur
 for (let a of operateur) {
     a.addEventListener("click", () => {
-        array1.push(a.value);
-        array2.push(array1.join(""));
-        array1 = [];
-        saisie.value = "";
-        stock.value = array2.join("");
+        if (resultat.value) {
+            array2 = [];
+            array1 = [resultat.value];
+            array1.push(a.value);
+            array2.push(array1.join(""));
+            array1 = [];
+            saisie.value = "";
+            stock.value = array2.join("");
+        } else {
+            array1.push(a.value);
+            array2.push(array1.join(""));
+            array1 = [];
+            saisie.value = "";
+            stock.value = array2.join("");
+        }
 
-    });
+
+    }
+
+    );
 }
 
 // Lorsqu'on click sur le bouton =
 document.querySelector(".egale").addEventListener("click", function calculer() {
-    console.log(array1.join(""));
     array2.push(saisie.value);
     array1 = [];
     stock.value = array2.join("");
@@ -56,9 +68,9 @@ document.querySelector(".egale").addEventListener("click", function calculer() {
 });
 
 // Losqu'on click sur le bouton point
-document.querySelector(".virgule").addEventListener("click", function virgule(){
+document.querySelector(".virgule").addEventListener("click", function virgule() {
     array1.push(".");
-    if(saisie.value.includes(".") && array1.includes(".")){
+    if (saisie.value.includes(".") && array1.includes(".")) {
         array1.pop();
         return
     };
