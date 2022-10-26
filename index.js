@@ -10,7 +10,9 @@ let array2 = [];
 
 //Losqu'on click sur le bouton clear
 document.querySelector(".init").addEventListener("click", function clear() {
+    // array1 est le nombre indiqué dans la partie saisie
     array1 = [];
+    // array2 est l'élément de calcul stocké sous forme d'array lorsqu'on appui sur un oppérateur.
     array2 = [];
     saisie.value = "";
     stock.value = "";
