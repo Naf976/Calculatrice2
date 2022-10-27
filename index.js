@@ -22,6 +22,13 @@ document.querySelector(".init").addEventListener("click", function clear() {
 document.querySelector(".sup").addEventListener("click", () => {
   array1.pop();
   saisie.value = array1.join("");
+  if(!saisie.value){
+    
+   let convertString = stock.value.split("");
+   convertString.pop();
+   array2 = convertString;
+   stock.value = convertString.join("");
+  }
 });
 
 // Losqu'on appuis sur un nombre
