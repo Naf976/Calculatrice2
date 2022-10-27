@@ -98,7 +98,11 @@ document.querySelector(".egale").addEventListener("click", function calculer() {
   saisie.value = "";
   array1 = [];
   stock.value = array2.join("");
-  resultat.value = eval(array2.join(""));
+  try{
+    resultat.value = eval(array2.join(""));
+  } catch(e){
+    alert(e);
+  }
 });
 
 // Losqu'on click sur le bouton point
