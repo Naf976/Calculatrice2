@@ -53,7 +53,6 @@ for (let a of operateur) {
         array1 = [];
         saisie.value = "";
         stock.value = array2.join("");
-        console.log(stock.value);
       } else {
         // dernierCharactere est une variable qui contient le dernier caractère du variable "stock".
         let dernierCaractere = stock.value.charAt(stock.value.length - 1);
@@ -80,7 +79,6 @@ for (let a of operateur) {
             array1 = [];
             saisie.value = "";
             stock.value = array2.join("");
-            console.log(stock.value);
           }
         } else {
           array1.push(a.value);
@@ -88,7 +86,6 @@ for (let a of operateur) {
           array1 = [];
           saisie.value = "";
           stock.value = array2.join("");
-          console.log(stock.value);
         }
       }
     }
@@ -98,6 +95,7 @@ for (let a of operateur) {
 // Lorsqu'on click sur le bouton =
 document.querySelector(".egale").addEventListener("click", function calculer() {
   array2.push(saisie.value);
+  saisie.value = "";
   array1 = [];
   stock.value = array2.join("");
   resultat.value = eval(array2.join(""));
