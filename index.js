@@ -20,14 +20,14 @@ document.querySelector(".init").addEventListener("click", function clear() {
 
 //  Losqu'on click sur le bouton DEL
 document.querySelector(".sup").addEventListener("click", () => {
-  array1.pop();
-  saisie.value = array1.join("");
-  if(!saisie.value){
-    
-   let convertString = stock.value.split("");
-   convertString.pop();
-   array2 = convertString;
-   stock.value = convertString.join("");
+  if (!saisie.value) {
+    let convertString = stock.value.split("");
+    convertString.pop();
+    array2 = convertString;
+    stock.value = convertString.join("");
+  } else {
+    array1.pop();
+    saisie.value = array1.join("");
   }
 });
 
@@ -105,9 +105,9 @@ document.querySelector(".egale").addEventListener("click", function calculer() {
   saisie.value = "";
   array1 = [];
   stock.value = array2.join("");
-  try{
+  try {
     resultat.value = eval(array2.join(""));
-  } catch(e){
+  } catch (e) {
     alert(e);
   }
 });
