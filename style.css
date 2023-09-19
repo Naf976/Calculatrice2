@@ -29,7 +29,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 500px;
-    height: 600px;
+    height: 700px;
     margin: auto;
     /*background-color: rgb(99, 152, 135);*/
     background: linear-gradient(rgb(203, 224, 217), rgb(99, 152, 135));
@@ -47,6 +47,12 @@ main{
     justify-content: center;
     align-items: center;
     border: 2px inset rgb(99, 152, 135);
+}
+h2{
+    opacity: 15%;
+    width: 300px;
+    margin: 20px auto;
+    border-bottom: dashed 2px rgb(8, 71, 50);
 }
 #calcul, #resultat{
     height: 100px;
@@ -146,3 +152,31 @@ aside{
     100% {background-color: rgb(225, 173, 173);}
 }
 
+@media screen and ( max-width: 700px) {
+    body{
+        font-size: 0.7em;
+        min-width: 0;
+        border: none;
+        height: 100vh;
+    }
+    main{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+   }
+   h1{
+    width: 70vw;
+    margin: 20px auto;
+   }
+   .touches input{
+    width: 60px;
+    height: 60px;
+   }
+   #valeurs{
+    width: 200px;
+    height: 300px;
+   }
+   section.touches{
+
+   }
+}
